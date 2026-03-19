@@ -38,7 +38,7 @@ const createConfig = (config?: OxfmtConfig): OxfmtConfig => {
             groups: SORT_IMPORTS_GROUPS_DEFAULT,
             ignoreCase: true,
             internalPattern: SORT_IMPORTS_INTERNAL_PATTERN_DEFAULT,
-            newlinesBetween: true,
+            newlinesBetween: false,
             order: "asc",
             partitionByComment: false,
             partitionByNewline: false,
