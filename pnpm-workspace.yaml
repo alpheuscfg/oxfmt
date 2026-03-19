@@ -1,0 +1,19 @@
+packages:
+    - ./package
+
+catalogs:
+    dev:
+        "oxfmt": 0.41.0
+    peer:
+        "oxfmt": ^0.41.0
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+    - "@apst/biome"
+    - "@apst/tsconfig"
+    - "@apst/tsdown"
+    - "@rolldown/*"
+    - "rolldown"
+    - "@tsdown/*"
+    - "tsdown"

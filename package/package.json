@@ -1,0 +1,60 @@
+{
+    "name": "@apst/oxfmt",
+    "version": "0.1.0",
+    "description": "A shareable Oxfmt configuration",
+    "keywords": [
+        "oxfmt",
+        "configuration",
+        "config",
+        "oxc",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/alpheuscfg/oxfmt",
+    "bugs": "https://github.com/alpheuscfg/oxfmt/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alpheuscfg/oxfmt.git",
+        "directory": "package"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Alpheus",
+        "email": "contact@alphe.us"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./consts": {
+            "types": "./dist/consts.d.ts",
+            "import": "./dist/consts.mjs",
+            "require": "./dist/consts.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "es-toolkit": "^1.40.0"
+    },
+    "devDependencies": {
+        "oxfmt": "catalog:dev"
+    },
+    "peerDependencies": {
+        "oxfmt": "catalog:peer"
+    },
+    "peerDependenciesMeta": {
+        "oxfmt": {
+            "optional": true
+        }
+    }
+}
