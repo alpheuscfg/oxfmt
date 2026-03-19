@@ -8,6 +8,23 @@ import {
     SORT_IMPORTS_INTERNAL_PATTERN_DEFAULT,
 } from "#/consts/sort-imports";
 
+const mergeConfig = (
+    configDefault: OxfmtConfig,
+    config?: OxfmtConfig,
+): OxfmtConfig => {
+    if (!config) return configDefault;
+
+    return mergeWith(
+        configDefault,
+        config,
+        // array replacement
+        (_: unknown, target: unknown): unknown => {
+            if (Array.isArray(target)) return target;
+            return void 0;
+        },
+    );
+};
+
 /**
  * Create an Oxfmt configuration.
  *
@@ -52,17 +69,7 @@ const createConfig = (config?: OxfmtConfig): OxfmtConfig => {
         useTabs: false,
     };
 
-    if (!config) return configDefault;
-
-    return mergeWith(
-        configDefault,
-        config,
-        // array replacement
-        (_: unknown, target: unknown): unknown => {
-            if (Array.isArray(target)) return target;
-            return void 0;
-        },
-    );
+    return mergeConfig(configDefault, config);
 };
 
 export { createConfig };
