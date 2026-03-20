@@ -1,4 +1,6 @@
 const IGNORE_PATTERNS_DEFAULT = [
+    // git
+    "**/.git/**",
     // macOS
     "**/__MACOSX/**",
     "**/.DS_Store",
