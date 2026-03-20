@@ -14,35 +14,51 @@ tst := "test"
 
 # Default action
 _:
-    just fmt
-    just lint
-    just build
+    just --list -u
 
 # Install
 i:
     pnpm install
 
-# Lint with TypeScript Compiler
+# Build package
+build:
+    cd ./{{pkg}} && {{tsdown}} -c tsdown.config.ts
+
+# Format code
+fmt:
+    {{biome}} check --write .
+
+# Lint code with ls-lint
+ls-lint:
+    ls-lint -config ./.ls-lint.yaml
+
+# Lint code with ls-lint
+lslint:
+    just ls-lint
+
+# Lint code with typos-cli
+typos:
+    typos
+
+# Lint code with TypeScript Compiler
 tsc:
     cd ./{{pkg}} && {{tsc}} --noEmit
 
 # Lint code
 lint:
-    ls-lint -config ./.ls-lint.yaml
-    typos
+    just lslint
+    just typos
     just tsc
 
 # Lint code with Biome
 lint-biome:
     {{biome}} lint .
 
-# Format code
-fmt:
-    {{biome}} check --write .
-
-# Build package
-build:
-    cd ./{{pkg}} && {{tsdown}} -c tsdown.config.ts
+# Check code
+check:
+    just build
+    just fmt
+    just lint
 
 # Publish package with dev tag as dry-run
 publish-dev-try:
