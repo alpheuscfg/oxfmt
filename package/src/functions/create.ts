@@ -1,39 +1,24 @@
 import type { OxfmtConfig } from "oxfmt";
 
-import { mergeWith } from "es-toolkit";
-
 import { IGNORE_PATTERNS_DEFAULT } from "#/consts/ignore-patterns";
 import {
     SORT_IMPORTS_GROUPS_DEFAULT,
     SORT_IMPORTS_INTERNAL_PATTERN_DEFAULT,
 } from "#/consts/sort-imports";
 
-const mergeConfig = (
-    configDefault: OxfmtConfig,
-    config?: OxfmtConfig,
-): OxfmtConfig => {
-    if (!config) return configDefault;
-
-    return mergeWith(
-        configDefault,
-        config,
-        // array replacement
-        (_: unknown, target: unknown): unknown => {
-            if (Array.isArray(target)) return target;
-            return void 0;
-        },
-    );
-};
-
 /**
  * Create an Oxfmt configuration.
  *
- * All arrays will not be merged, adding new values will replace existing values.
+ * ### Example
  *
- * For extending the existing arrays, consider import them from `@apst/oxfmt/consts`.
+ * ```ts
+ * import { createConfig } from "@apst/oxfmt";
+ *
+ * export default createConfig();
+ * ```
  */
-const createConfig = (config?: OxfmtConfig): OxfmtConfig => {
-    const configDefault: OxfmtConfig = {
+const createConfig = (): OxfmtConfig => {
+    return {
         arrowParens: "always",
         bracketSameLine: false,
         bracketSpacing: true,
@@ -68,8 +53,6 @@ const createConfig = (config?: OxfmtConfig): OxfmtConfig => {
         trailingComma: "all",
         useTabs: false,
     };
-
-    return mergeConfig(configDefault, config);
 };
 
 export { createConfig };
