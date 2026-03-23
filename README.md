@@ -22,7 +22,7 @@ bun add @apst/oxfmt
 
 ## Usage
 
-Implement the configuration into `oxlint.config.ts`:
+Implement the configuration into `oxfmt.config.ts`:
 
 ```ts
 import { defineConfig } from "@apst/oxfmt";
