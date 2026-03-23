@@ -20,10 +20,6 @@ _:
 i:
     pnpm install
 
-# Build package
-build:
-    cd ./{{pkg}} && {{tsdown}} -c tsdown.config.ts
-
 # Format code
 fmt:
     {{biome}} check --write .
@@ -54,11 +50,15 @@ lint:
 lint-biome:
     {{biome}} lint .
 
+# Build package
+build:
+    cd ./{{pkg}} && {{tsdown}} -c tsdown.config.ts
+
 # Check code
 check:
-    just build
     just fmt
     just lint
+    just build
 
 # Publish package with dev tag as dry-run
 publish-dev-try:

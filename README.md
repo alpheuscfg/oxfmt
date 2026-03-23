@@ -2,21 +2,45 @@
 
 A shareable Oxfmt configuration.
 
-Implement the configuration into `oxfmt.config.ts`:
+## Installation
 
-```ts
-import { createConfig } from "@apst/oxfmt";
+Install this package as a dependency in the project:
 
-export default createConfig();
+```sh
+# npm
+npm i @apst/oxfmt
+
+# Yarn
+yarn add @apst/oxfmt
+
+# pnpm
+pnpm add @apst/oxfmt
+
+# Bun
+bun add @apst/oxfmt
 ```
 
-For extending the configuration, use `withConfig`:
+## Usage
+
+Implement the configuration into `oxlint.config.ts`:
 
 ```ts
-import { withConfig } from "@apst/oxfmt";
+import { defineConfig } from "@apst/oxfmt";
 
-export default withConfig({
-    printWidth: 120,
+export default defineConfig();
+```
+
+It is possible to override the default configuration by passing an object to the `defineConfig` function:
+
+```ts
+import { defineConfig } from "@apst/oxfmt";
+import { IGNORE_PATTERNS_DEFAULT } from "@apst/oxfmt/constants/ignore-patterns";
+
+export default defineConfig({
+    ignorePatterns: [
+        ...IGNORE_PATTERNS_DEFAULT,
+        // ...
+    ],
 });
 ```
 
