@@ -1,10 +1,12 @@
 import type { OxfmtConfig } from "oxfmt";
 
+import { clone } from "es-toolkit";
+
 import { CONFIG_DEFAULT } from "#/constants/default";
 import { mergeConfig } from "#/functions/merge";
 
 const defineConfigFn = (userConfig?: OxfmtConfig): OxfmtConfig => {
-    return mergeConfig(CONFIG_DEFAULT, userConfig);
+    return mergeConfig(clone(CONFIG_DEFAULT), userConfig);
 };
 
 /**
