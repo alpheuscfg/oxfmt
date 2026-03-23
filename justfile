@@ -4,6 +4,7 @@ set windows-shell := ["pwsh", "-Command"]
 tsc := "pnpm exec tsc"
 biome := "pnpm exec biome"
 tsdown := "pnpm exec tsdown"
+vitest := "pnpm exec vitest"
 
 publish_dev := "pnpm publish --no-git-checks --tag dev --access public"
 publish := "pnpm publish --access public"
@@ -54,11 +55,16 @@ lint-biome:
 build:
     cd ./{{pkg}} && {{tsdown}} -c tsdown.config.ts
 
+# Test
+test:
+    cd ./{{tst}} && {{vitest}} run
+
 # Check code
 check:
     just fmt
     just lint
     just build
+    just test
 
 # Publish package with dev tag as dry-run
 publish-dev-try:

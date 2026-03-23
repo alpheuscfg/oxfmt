@@ -1,0 +1,11 @@
+{
+    "private": true,
+    "dependencies": {
+        "@apst/oxfmt": "workspace:*",
+        "oxfmt": "catalog:dev",
+        "vitest": "^4.1.0"
+    },
+    "devDependencies": {
+        "vite-tsconfig-paths": "^6.1.1"
+    }
+}
