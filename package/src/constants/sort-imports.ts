@@ -21,20 +21,26 @@ const SORT_IMPORTS_GROUPS_DEFAULT = [
         newlinesBetween: true,
     },
     // import type { x } from "p";
-    [
-        "type-external",
-        "type-subpath",
-    ],
+    "type-external",
+    {
+        newlinesBetween: true,
+    },
+    // import type { x } from "#p/abc";
+    "type-subpath",
     {
         newlinesBetween: true,
     },
     // import type { x } from "#/p";
     "type-internal",
-    [
-        "type-parent",
-        "type-sibling",
-        "type-index",
-    ],
+    {
+        newlinesBetween: true,
+    },
+    // import type { x } from "../p";
+    "type-parent",
+    // import type { x } from "./p";
+    "type-sibling",
+    // import type { x } from ".";
+    "type-index",
     {
         newlinesBetween: true,
     },
@@ -49,20 +55,26 @@ const SORT_IMPORTS_GROUPS_DEFAULT = [
         newlinesBetween: true,
     },
     // import { x } from "p";
-    [
-        "external",
-        "subpath",
-    ],
+    "external",
+    {
+        newlinesBetween: true,
+    },
+    // import { x } from "#p/abc";
+    "subpath",
     {
         newlinesBetween: true,
     },
     // import { x } from "#/p";
     "internal",
-    [
-        "parent",
-        "sibling",
-        "index",
-    ],
+    {
+        newlinesBetween: true,
+    },
+    // import { x } from "../p";
+    "parent",
+    // import { x } from "./p";
+    "sibling",
+    // import { x } from ".";
+    "index",
     {
         newlinesBetween: true,
     },
