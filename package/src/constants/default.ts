@@ -40,9 +40,11 @@ const CONFIG_DEFAULT = {
     sortPackageJson: {
         sortScripts: false,
     },
+    sortTailwindcss: void 0,
     tabWidth: 4,
     trailingComma: "all",
     useTabs: false,
+    vueIndentScriptAndStyle: void 0,
 } as const satisfies OxfmtConfig;
 
 export { CONFIG_DEFAULT };
