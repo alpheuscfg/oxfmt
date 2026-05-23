@@ -4,9 +4,9 @@ packages:
 
 catalogs:
     dev:
-        "oxfmt": 0.41.0
+        "oxfmt": 0.50.0
     peer:
-        "oxfmt": ^0.41.0
+        "oxfmt": ^0.50.0
 
 minimumReleaseAge: 1440
 

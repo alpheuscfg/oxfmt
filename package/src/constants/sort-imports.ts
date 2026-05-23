@@ -1,8 +1,6 @@
-import type { OxfmtConfig } from "oxfmt";
+import type { SortImportsConfig } from "oxfmt";
 
-type SortGroupItemConfigArray = Required<
-    Required<OxfmtConfig>["sortImports"]
->["groups"];
+type SortGroupItemConfigArray = Required<Required<SortImportsConfig>["groups"]>;
 
 const SORT_IMPORTS_GROUPS_DEFAULT = [
     // import "p";
