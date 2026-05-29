@@ -2,6 +2,9 @@ packages:
     - ./package
     - ./test
 
+autoInstallPeers: false
+strictPeerDependencies: false
+
 catalogs:
     dev:
         "oxfmt": 0.50.0
