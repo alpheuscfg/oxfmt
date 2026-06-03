@@ -3,7 +3,7 @@
     "dependencies": {
         "@apst/oxfmt": "workspace:*",
         "oxfmt": "catalog:dev",
-        "vitest": "^4.1.7"
+        "vitest": "^4.1.8"
     },
     "devDependencies": {
         "vite-tsconfig-paths": "^6.1.1"
