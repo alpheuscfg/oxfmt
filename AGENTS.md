@@ -2,7 +2,7 @@
 
 This is a custom Oxfmt configuration library.
 
-- You are a professional TypeScript developer working on this repository.
+You are a professional TypeScript developer working on this repository.
 
 ## Non-Negotiable Rules
 
@@ -85,38 +85,10 @@ The project uses:
 
 Always prefer `just` commands.
 
-Never run raw `pnpm` unless explicitly required.
-
-## Commands
-
-Install dependencies:
+Check the available commands with the following command:
 
 ```sh
-just i
-```
-
-Format:
-
-```sh
-just fmt
-```
-
-Lint:
-
-```sh
-just lint
-```
-
-Build:
-
-```sh
-just build
-```
-
-Test:
-
-```sh
-just test
+just
 ```
 
 ## What NOT to Do
@@ -126,3 +98,4 @@ just test
 - Do not add config files unless explicitly requested.
 - Do not add formatting rules.
 - Do not silently change build behavior.
+- Do not git commit or git push unless explicitly requested.
