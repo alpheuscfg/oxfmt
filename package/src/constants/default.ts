@@ -54,6 +54,7 @@ const CONFIG_DEFAULT = {
         sortScripts: false,
     },
     sortTailwindcss: void 0,
+    svelte: void 0,
     tabWidth: 4,
     trailingComma: "all",
     useTabs: false,
