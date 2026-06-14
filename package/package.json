@@ -30,20 +30,10 @@
             "import": "./dist/index.mjs",
             "require": "./dist/index.js"
         },
-        "./constants/default": {
-            "types": "./dist/constants/default.d.ts",
-            "import": "./dist/constants/default.mjs",
-            "require": "./dist/constants/default.js"
-        },
-        "./constants/ignore-patterns": {
-            "types": "./dist/constants/ignore-patterns.d.ts",
-            "import": "./dist/constants/ignore-patterns.mjs",
-            "require": "./dist/constants/ignore-patterns.js"
-        },
-        "./constants/sort-imports": {
-            "types": "./dist/constants/sort-imports.d.ts",
-            "import": "./dist/constants/sort-imports.mjs",
-            "require": "./dist/constants/sort-imports.js"
+        "./constants/*": {
+            "types": "./dist/constants/*.d.ts",
+            "import": "./dist/constants/*.mjs",
+            "require": "./dist/constants/*.js"
         },
         "./package.json": "./package.json"
     },

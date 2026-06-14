@@ -3,14 +3,12 @@ import { cjsPreset, dtsPreset, esmPreset } from "@apst/tsdown/presets";
 
 export default defineConfig(
     {
-        entry: {
+        entry: [
             // entry
-            index: "./src/index.ts",
+            "./src/index.ts",
             // constants
-            "constants/default": "./src/constants/default.ts",
-            "constants/ignore-patterns": "./src/constants/ignore-patterns.ts",
-            "constants/sort-imports": "./src/constants/sort-imports.ts",
-        },
+            "./src/constants/*.ts",
+        ],
         platform: "node",
         unbundle: true,
     },
