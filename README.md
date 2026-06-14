@@ -4,20 +4,20 @@ A shareable Oxfmt configuration.
 
 ## Installation
 
-Install this package as a dependency in the project:
+Install these packages as a dev dependencies in the project:
 
 ```sh
 # npm
-npm i @apst/oxfmt
+npm i -D oxfmt @apst/oxfmt
 
 # Yarn
-yarn add @apst/oxfmt
+yarn add -D oxfmt @apst/oxfmt
 
 # pnpm
-pnpm add @apst/oxfmt
+pnpm add -D oxfmt @apst/oxfmt
 
 # Bun
-bun add @apst/oxfmt
+bun add -D oxfmt @apst/oxfmt
 ```
 
 ## Usage
