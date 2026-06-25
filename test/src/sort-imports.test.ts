@@ -63,8 +63,8 @@ describe("sortImports test", (): void => {
         const sortImports = config.sortImports as SortImportsConfig;
 
         expect(config.sortImports).toEqual(CONFIG_DEFAULT.sortImports);
-        expect(sortImports.groups).toBe(SORT_IMPORTS_GROUPS_DEFAULT);
-        expect(sortImports.internalPattern).toBe(
+        expect(sortImports.groups).toStrictEqual(SORT_IMPORTS_GROUPS_DEFAULT);
+        expect(sortImports.internalPattern).toStrictEqual(
             SORT_IMPORTS_INTERNAL_PATTERN_DEFAULT,
         );
     });
