@@ -40,6 +40,7 @@ typos:
 # Lint code with TypeScript Compiler
 tsc:
     cd ./{{pkg}} && {{tsc}} --noEmit
+    cd ./{{tst}} && {{tsc}} --noEmit
 
 # Lint code
 lint:
