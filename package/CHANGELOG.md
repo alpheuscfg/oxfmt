@@ -1,7 +1,12 @@
 ## Next
 
+### What's New
+
+- export `CONFIG_DEFAULT_SVELTE`
+
 ### What's Changed
 
+- make `vueIndentScriptAndStyle` `true` be default
 - update default ignore patterns
 - use source value for array replacement
 

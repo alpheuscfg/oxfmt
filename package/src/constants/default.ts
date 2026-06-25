@@ -1,10 +1,21 @@
-import type { OxfmtConfig } from "oxfmt";
+import type { OxfmtConfig, SvelteUserConfig } from "oxfmt";
 
 import { IGNORE_PATTERNS_DEFAULT } from "#/constants/ignore-patterns";
 import {
     SORT_IMPORTS_GROUPS_DEFAULT,
     SORT_IMPORTS_INTERNAL_PATTERN_DEFAULT,
 } from "#/constants/sort-imports";
+
+/**
+ * Default config for `svelte` option in Oxfmt.
+ * 
+ * Append it manually when using Svelte.
+ */
+const CONFIG_DEFAULT_SVELTE = {
+    allowShorthand: false,
+    indentScriptAndStyle: true,
+    sortOrder: "options-scripts-markup-styles",
+} as const satisfies SvelteUserConfig;
 
 /**
  * Default config for Oxfmt.
@@ -58,7 +69,7 @@ const CONFIG_DEFAULT = {
     tabWidth: 4,
     trailingComma: "all",
     useTabs: false,
-    vueIndentScriptAndStyle: void 0,
+    vueIndentScriptAndStyle: true,
 } as const satisfies OxfmtConfig;
 
-export { CONFIG_DEFAULT };
+export { CONFIG_DEFAULT, CONFIG_DEFAULT_SVELTE };
