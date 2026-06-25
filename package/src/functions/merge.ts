@@ -9,12 +9,17 @@ const mergeConfig = <
 ): T & S => {
     if (!source) return target;
 
-    return mergeWith(target, source, (_: unknown, target: unknown): unknown => {
-        // array replacement
-        if (Array.isArray(target)) return target;
-        // default deep merge
-        return void 0;
-    });
+    return mergeWith(
+        target,
+        source,
+        (_: unknown, sourceValue: unknown): unknown => {
+            // array replacement
+            if (Array.isArray(sourceValue)) return sourceValue;
+
+            // default deep merge
+            return void 0;
+        },
+    );
 };
 
 export { mergeConfig };
