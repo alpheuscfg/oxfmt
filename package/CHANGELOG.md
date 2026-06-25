@@ -2,6 +2,7 @@
 
 ### What's Changed
 
+- update default ignore patterns
 - use source value for array replacement
 
 ## 0.1.1 (2026-06-14)
