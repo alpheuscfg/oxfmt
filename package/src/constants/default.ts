@@ -1,4 +1,8 @@
-import type { OxfmtConfig, SvelteUserConfig } from "oxfmt";
+import type {
+    OxfmtConfig,
+    SortTailwindcssUserConfig,
+    SvelteUserConfig,
+} from "oxfmt";
 
 import { IGNORE_PATTERNS_DEFAULT } from "#/constants/ignore-patterns";
 import {
@@ -7,8 +11,38 @@ import {
 } from "#/constants/sort-imports";
 
 /**
+ * Default attributes for `sortTailwindcss` option in Oxfmt.
+ */
+const CONFIG_DEFAULT_SORT_TAILWINDCSS_ATTRIBUTES = [
+    ":class",
+] as const satisfies string[];
+
+/**
+ * Default functions for `sortTailwindcss` option in Oxfmt.
+ */
+const CONFIG_DEFAULT_SORT_TAILWINDCSS_FUNCTIONS = [
+    "clsx",
+    "cn",
+    "cva",
+    "tw",
+] as const satisfies string[];
+
+/**
+ * Default config for `sortTailwindcss` option in Oxfmt.
+ *
+ * Append it manually when using Tailwind CSS.
+ */
+const CONFIG_DEFAULT_SORT_TAILWINDCSS = {
+    attributes: CONFIG_DEFAULT_SORT_TAILWINDCSS_ATTRIBUTES,
+    config: "tailwind.config.ts",
+    functions: CONFIG_DEFAULT_SORT_TAILWINDCSS_FUNCTIONS,
+    preserveDuplicates: false,
+    preserveWhitespace: false,
+} as const satisfies SortTailwindcssUserConfig;
+
+/**
  * Default config for `svelte` option in Oxfmt.
- * 
+ *
  * Append it manually when using Svelte.
  */
 const CONFIG_DEFAULT_SVELTE = {
@@ -72,4 +106,10 @@ const CONFIG_DEFAULT = {
     vueIndentScriptAndStyle: true,
 } as const satisfies OxfmtConfig;
 
-export { CONFIG_DEFAULT, CONFIG_DEFAULT_SVELTE };
+export {
+    CONFIG_DEFAULT,
+    CONFIG_DEFAULT_SORT_TAILWINDCSS,
+    CONFIG_DEFAULT_SORT_TAILWINDCSS_ATTRIBUTES,
+    CONFIG_DEFAULT_SORT_TAILWINDCSS_FUNCTIONS,
+    CONFIG_DEFAULT_SVELTE,
+};
