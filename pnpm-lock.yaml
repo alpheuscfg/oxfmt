@@ -44,7 +44,7 @@ importers:
     devDependencies:
       oxfmt:
         specifier: catalog:dev
-        version: 0.50.0(svelte@5.56.9)
+        version: 0.50.0(svelte@5.56.10)
 
   test:
     dependencies:
@@ -53,14 +53,14 @@ importers:
         version: link:../package
       oxfmt:
         specifier: catalog:dev
-        version: 0.50.0(svelte@5.56.9)
+        version: 0.50.0(svelte@5.56.10)
       vitest:
         specifier: ^4.1.11
         version: 4.1.11(@types/node@26.2.0)
     devDependencies:
       svelte:
-        specifier: 5.56.9
-        version: 5.56.9
+        specifier: 5.56.10
+        version: 5.56.10
       vite-tsconfig-paths:
         specifier: ^6.1.1
         version: 6.1.1(typescript@6.0.3)(vite@8.2.1(@types/node@26.2.0))
@@ -507,8 +507,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@sveltejs/acorn-typescript@1.0.12':
-    resolution: {integrity: sha512-J1jNYG23QWd67UfrQSFHtjhV37r9mVi0gdc12A3MWPldOjRK35Xk+um+qACPVjgw3AleiqoyEAhok8Wm3q46NA==}
+  '@sveltejs/acorn-typescript@1.0.13':
+    resolution: {integrity: sha512-wgKggnhZVL9Bfx1OaKKTrYY9BFRk6C8UAkQNUcIv1+llzYrIqy+RZm5HPKzn0NpEBvTVhTqB4kQyllZywsRBRQ==}
     peerDependencies:
       acorn: ^8.9.0
 
@@ -736,8 +736,8 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
-  devalue@5.9.0:
-    resolution: {integrity: sha512-RWrqdArjvPbsATEhOPUo6Wndc/iWnkWKlhIrdlF3zMMYo/c3CVtoaVAyLtWxz5h8nSlkHzxnzV2uLydPXmtF+A==}
+  devalue@5.9.1:
+    resolution: {integrity: sha512-+17vil3EVQRzvtDJSFuTWEb8XJRvXqAiV3qZyQWD398QeXUa6CxsUyMdD1fxzEhUrd4FojitFz7lhIHBTlV4fw==}
 
   dts-resolver@3.0.0:
     resolution: {integrity: sha512-1T1f+z+4tl9XD+m+0HBgWoL/nm0bOIffyWaUuUSBlFg/86IWvfx+wjNaO/ybU0AJzG9/Mi5hBUgGV6zCmWEN7Q==}
@@ -761,8 +761,8 @@ packages:
   esm-env@1.2.2:
     resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
-  esrap@2.3.2:
-    resolution: {integrity: sha512-40GyiEJevYKXzYTHtZkFqAgTjLOuFcaXMao8TPyOlnWTlkHDlvZ6mPMJaJyOqVwrVCgomEG1WhJd81w0X+IcCw==}
+  esrap@2.3.6:
+    resolution: {integrity: sha512-yc0OC12UjPqLoc+fe+v5GNs4TOjAigUw3sTikfC+xeBPGUw7gDRz3DtYaqEhxyMVJojcSWJw7jT0QWR+CbuE/A==}
     peerDependencies:
       '@typescript-eslint/types': ^8.2.0
     peerDependenciesMeta:
@@ -971,8 +971,8 @@ packages:
   std-env@4.2.0:
     resolution: {integrity: sha512-oCUKSupKTHX53EyjDtuZQ64pjLJ6yYCtpmEw0goYxtjG9KpbRe8KAsl2tBUGU9DyMcJ0RwJ8GqJAFzMXcXW1Rw==}
 
-  svelte@5.56.9:
-    resolution: {integrity: sha512-VT8kSnlEg8069w7AiCcAk3Yf5xvMnrGTagVOmU/OpOLHaHnNqXhWZCH/4EVga/bT/HtWhvE6/fHrXLErx7OnJA==}
+  svelte@5.56.10:
+    resolution: {integrity: sha512-Lcxbj8I/KAbpY+VjtY4ENQBV0dDCipfGAhqb51XQZ67CIQqXgsv/8dPkbILaj4Fb6/b6JAEM/PIVbILXgDQy2g==}
     engines: {node: '>=18'}
 
   tinybench@2.9.0:
@@ -1426,7 +1426,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@sveltejs/acorn-typescript@1.0.12(acorn@8.18.0)':
+  '@sveltejs/acorn-typescript@1.0.13(acorn@8.18.0)':
     dependencies:
       acorn: 8.18.0
 
@@ -1585,7 +1585,7 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
-  devalue@5.9.0: {}
+  devalue@5.9.1: {}
 
   dts-resolver@3.0.0: {}
 
@@ -1597,7 +1597,7 @@ snapshots:
 
   esm-env@1.2.2: {}
 
-  esrap@2.3.2:
+  esrap@2.3.6:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -1689,7 +1689,7 @@ snapshots:
 
   obug@2.1.4: {}
 
-  oxfmt@0.50.0(svelte@5.56.9):
+  oxfmt@0.50.0(svelte@5.56.10):
     dependencies:
       tinypool: 2.1.0
     optionalDependencies:
@@ -1712,7 +1712,7 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.50.0
       '@oxfmt/binding-win32-ia32-msvc': 0.50.0
       '@oxfmt/binding-win32-x64-msvc': 0.50.0
-      svelte: 5.56.9
+      svelte: 5.56.10
 
   pathe@2.0.3: {}
 
@@ -1794,20 +1794,20 @@ snapshots:
 
   std-env@4.2.0: {}
 
-  svelte@5.56.9:
+  svelte@5.56.10:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
-      '@sveltejs/acorn-typescript': 1.0.12(acorn@8.18.0)
+      '@sveltejs/acorn-typescript': 1.0.13(acorn@8.18.0)
       '@types/estree': 1.0.9
       '@types/trusted-types': 2.0.7
       acorn: 8.18.0
       aria-query: 5.3.1
       axobject-query: 4.1.0
       clsx: 2.1.1
-      devalue: 5.9.0
+      devalue: 5.9.1
       esm-env: 1.2.2
-      esrap: 2.3.2
+      esrap: 2.3.6
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
