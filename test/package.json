@@ -3,7 +3,7 @@
     "dependencies": {
         "@apst/oxfmt": "workspace:*",
         "oxfmt": "catalog:dev",
-        "vitest": "^4.1.11"
+        "vitest": "^5.0.0"
     },
     "devDependencies": {
         "svelte": "5.57.0",
